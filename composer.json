@@ -1,0 +1,31 @@
+{
+  "name": "pengtao/sdk_datacenter",
+  "description": "data center php sdk",
+  "type": "library",
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Peng tao",
+      "email": "taopeng2001@gmail.com"
+    }
+  ],
+  "autoload": {
+	  "psr-4": {
+		  "DataCenter\\": "src/"
+	  }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.8"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DataCenter\\DataCenterServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev"
+}
