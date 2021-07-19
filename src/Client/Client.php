@@ -1,5 +1,5 @@
 <?php
-namespace SdkDataCenter\Client;
+namespace Pengtao\SdkDataCenter\Client;
 class Client implements ClientInterface
 {
     
