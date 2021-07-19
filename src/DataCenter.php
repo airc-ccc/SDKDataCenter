@@ -1,5 +1,5 @@
 <?php
-namespace DataCenter;
+namespace SdkDataCenter;
 
 class DataCenter
 {
