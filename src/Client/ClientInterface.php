@@ -1,5 +1,5 @@
 <?php
-namespace SdkDataCenter\Client;
+namespace DataCenter\Client;
 
 interface ClientInterface
 {
