@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SdkDataCenter\\": "src/"
+            "Pengtao\\SdkDataCenter\\": "src/"
         }
     }
 }

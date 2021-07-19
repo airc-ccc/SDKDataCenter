@@ -1,5 +1,5 @@
 <?php
-namespace SdkDataCenter;
+namespace Pengtao\SdkDataCenter;
 
 use Illuminate\Support\ServiceProvider;
 
