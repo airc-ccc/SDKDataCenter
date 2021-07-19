@@ -1,31 +1,21 @@
 {
-  "name": "pengtao/sdk_datacenter",
-  "description": "data center php sdk",
-  "type": "library",
-  "require": {
-    "php": ">=7.3.0"
-  },
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "Peng tao",
-      "email": "taopeng2001@gmail.com"
+    "name": "pengtao/sdk_datacenter",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pengtao",
+            "email": "pengtao@huiwenliye.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.4",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DataCenter\\": "src/"
+        }
     }
-  ],
-  "autoload": {
-	  "psr-4": {
-		  "DataCenter\\": "src/"
-	  }
-  },
-  "require-dev": {
-    "orchestra/testbench": "^3.8"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "DataCenter\\DataCenterServiceProvider"
-      ]
-    }
-  },
-  "minimum-stability": "dev"
 }
