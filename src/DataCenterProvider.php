@@ -1,5 +1,5 @@
 <?php
-namespace DataCenter;
+namespace SdkDataCenter;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -7,7 +7,7 @@ class DataCenterProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->register('dataCenter', function () {
+        $this->app->register('sdkDataCenter', function () {
             return new DataCenter();
         });
     }
