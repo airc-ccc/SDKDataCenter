@@ -12,14 +12,14 @@ class DataCenterTests extends TestCase
     {
         $config = [
             'params' => [
-                '_app_token' => '46961be1a6a869ca5b9b36b56e175dea',
-                '_channel' => '3057b0f1047f8b49e47a2be1c0c462fd',
+                '_app_token' => '2',
+                '_channel' => '1',
                 '_version' => '1.0.0',
                 '_time' => time(),
                 'uri' => '/my/info',
                 'params' => json_encode([])
             ],
-            'secert' => '!@d#a$t%^a&c*e)n(*t&er^%$,./'
+            'secert' => ''
         ];
 
         $dataCenter = new DataCenter($config);
