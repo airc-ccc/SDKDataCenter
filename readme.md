@@ -1,7 +1,7 @@
 # Data Center SDK
 
 
-## Install.
+## Install
 ```
 composer require pengtao/sdk_datacenter
 ```
@@ -9,9 +9,20 @@ composer require pengtao/sdk_datacenter
 ```PHP
 <?php
 
+$config = [
+    'params' => [
+        '_app_token' => '',
+        '_channel' => '',
+        '_version' => '',
+        '_time' => time(),
+        'uri' => '',
+        'params' => ''
+    ],
+    'secert' => ''
+];
+
 $dataCenter = new DataCenter($config);
 
-// order 是一个模块, send是order的一个方法
-$dataCenter->order->send();
+$dataCenter->base->send();
 
 ```
