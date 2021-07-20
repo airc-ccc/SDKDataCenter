@@ -12,14 +12,22 @@ class DataCenterTests extends TestCase
     {
         $config = [
             'params' => [
-                'app_token' => 'abc',
-                'channel' => 'fuck'
+                '_app_token' => '46961be1a6a869ca5b9b36b56e175dea',
+                '_channel' => '3057b0f1047f8b49e47a2be1c0c462fd',
+                '_version' => '1.0.0',
+                '_time' => time(),
+                'uri' => '/my/info',
+                'params' => json_encode([])
             ],
-            'secert' => ''
+            'secert' => '!@d#a$t%^a&c*e)n(*t&er^%$,./'
         ];
 
         $dataCenter = new DataCenter($config);
 
-        $this->assertEquals('Send Base.', $dataCenter->base->send());
+        $result = $dataCenter->base->send();
+
+        $this->assertIsArray($result);
+
+        print_r($result);
     }
 }

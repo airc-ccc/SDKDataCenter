@@ -7,6 +7,10 @@ interface ApiInterface
 
     const BASE_ROUTE = "/base-api/set-data"; // 请求地址
 
+
+    const CODE_SUCCESS = 200;
+    const CODE_FAILED = 500;
+
     /**
      * 签名参数
      */
@@ -16,5 +20,5 @@ interface ApiInterface
     /**
      * 发出请求
      */
-    public function sendAsync();
+    public function sendAsync($async = false);
 }

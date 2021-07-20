@@ -10,24 +10,24 @@ class Base extends AbstractComponent
 {
     private $apiClass;
 
+    public $rule = [
+        'required' => ['uri', 'params'],
+        'type' => ['uri' => 'string', 'params' => 'string']
+    ];
 
-    public function __construct()
+
+    public function __construct($config)
     {
+        parent::__construct($config);
+        $this->validParms();
         $this->apiClass = new Api($this->params, $this->secert);
     }
 
 
     public function send()
     {
-        $promise = $this->apiClass->sendAsync();
-
-        $promise->then(
-            function (ResponseInterface $response) {
-                return $response->getStatusCode();
-            },
-            function(RequestException $e) {
-                throw $e;
-            }
-        );
+        $async = false;
+        $result = $this->apiClass->sendAsync($async);
+        return $result;
     }
 }
