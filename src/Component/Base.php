@@ -3,16 +3,16 @@ namespace Pengtao\SdkDataCenter\Component;
 
 use Pengtao\SdkDataCenter\Api;
 
-use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Exception\RequestException;
-
 class Base extends AbstractComponent 
 {
     private $apiClass;
 
+    /**
+     * Type: string、integer
+     */
     public $rule = [
-        'required' => ['uri', 'params'],
-        'type' => ['uri' => 'string', 'params' => 'string']
+        'required' => ['base_uri', 'params', 'remote_addr'],
+        'type' => ['base_uri' => 'string', 'params' => 'string', 'remote_addr' => 'integer']
     ];
 
 
