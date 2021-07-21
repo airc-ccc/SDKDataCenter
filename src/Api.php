@@ -11,6 +11,8 @@ class Api implements ApiInterface
 {
     private $client;
 
+    private $http;
+
     private $params;
 
     private $secert;
@@ -26,9 +28,10 @@ class Api implements ApiInterface
         'Content-Type' => 'application/json'
     ];
 
-    public function __construct($params, $secert, $headers = [])
+    public function __construct($http, $params, $secert, $headers = [])
     {
         $this->secert = $secert;
+        $this->http   = $http;
         $this->params = $params;
         $this->processPublicParams();
         if (! empty($headers)) {
@@ -36,7 +39,7 @@ class Api implements ApiInterface
         }
         $this->sign();
         $this->client = new Client([
-            'base_uri' => self::BASE_HOST,
+            'base_uri' => !empty($this->http['host']) ? $this->http['host'] : self::BASE_HOST,
             'timeout'  => 2.0
         ]);
     }

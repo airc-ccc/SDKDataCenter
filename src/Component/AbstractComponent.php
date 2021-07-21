@@ -5,6 +5,8 @@ use GuzzleHttp\Exception\InvalidArgumentException;
 
 abstract class AbstractComponent 
 {
+    protected $http = [];
+
     protected $params = [];
 
     protected $secert = '';
@@ -13,6 +15,7 @@ abstract class AbstractComponent
 
     public function __construct($config)
     {
+        $this->http = $config['http'];
         $this->params = $config['params'];
 
         if (empty($config['secert'])) {
