@@ -20,7 +20,7 @@ class Base extends AbstractComponent
     {
         parent::__construct($config);
         $this->validParms();
-        $this->apiClass = new Api($this->params, $this->secert);
+        $this->apiClass = new Api($this->http, $this->params, $this->secert);
     }
 
 

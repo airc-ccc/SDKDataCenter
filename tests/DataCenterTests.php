@@ -11,6 +11,9 @@ class DataCenterTests extends TestCase
     public function testDataCenter()
     {
         $config = [
+            'http' => [
+                'host' => '',
+            ],
             'params' => [
                 '_app_token' => '2',
                 '_channel' => '1',
