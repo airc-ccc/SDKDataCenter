@@ -1,2 +1,2 @@
 /vendor/
-tests/DataCenterTests_local.php
+tests/DataCenterLocalTests.php
