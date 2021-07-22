@@ -60,8 +60,6 @@ class Api implements ApiInterface
 
     public function sendAsync($async = false)
     {
-        print_r("\n ");
-        print_r($this->params);
         $response = $this->client->request('POST', self::BASE_ROUTE, 
         [
             'headers' => $this->headers,
