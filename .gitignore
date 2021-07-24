@@ -1,2 +1,3 @@
 /vendor/
 tests/DataCenterLocalTests.php
+.DS_Store

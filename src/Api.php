@@ -13,6 +13,8 @@ class Api implements ApiInterface
 
     private $http;
 
+    private $route;
+
     private $params;
 
     private $secert;
@@ -28,10 +30,11 @@ class Api implements ApiInterface
         'Content-Type' => 'application/json'
     ];
 
-    public function __construct($http, $params, $secert, $headers = [])
+    public function __construct($http, $route, $params, $secert, $headers = [])
     {
         $this->secert = $secert;
         $this->http   = $http;
+        $this->route   = $route;
         $this->params = $params;
         $this->processPublicParams();
         if (! empty($headers)) {
@@ -60,7 +63,7 @@ class Api implements ApiInterface
 
     public function sendAsync($async = false)
     {
-        $response = $this->client->request('POST', self::BASE_ROUTE, 
+        $response = $this->client->request('POST', $this->route, 
         [
             'headers' => $this->headers,
             'body' => json_encode($this->params)
