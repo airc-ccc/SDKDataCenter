@@ -3,18 +3,25 @@ namespace Pengtao\SdkDataCenter\Component;
 
 use Pengtao\SdkDataCenter\Api;
 
-class Base extends AbstractComponent 
+class Action extends AbstractComponent 
 {
-    private $route = "/base-api/set-data";
+    private $route = "/base-api/set-action";
 
     private $apiClass;
+
+    const ACTION_REGISTER = 'REGISTER';
+    const ACTION_PAY = 'PAY';
 
     /**
      * Type: string、integer
      */
     public $rule = [
-        'required' => ['base_uri', 'params', 'remote_addr'],
-        'type' => ['base_uri' => 'string', 'params' => 'string', 'remote_addr' => 'integer']
+        'required' => ['action_buid', 'action_key', 'action_params', 'action_timestamp'],
+        'type' => [
+            'action_key' => 'string',
+            'action_params' => 'string',
+            'action_timestamp' => 'integer', 
+            'action_buid' => 'integer']
     ];
 
 

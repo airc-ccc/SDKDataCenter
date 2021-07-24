@@ -5,9 +5,6 @@ interface ApiInterface
 {
     const BASE_HOST = "http://localhost:7801"; // 数据中心域名
 
-    const BASE_ROUTE = "/base-api/set-data"; // 请求地址
-
-
     const CODE_SUCCESS = 200;
     const CODE_FAILED = 500;
 
