@@ -1,7 +1,7 @@
 <?php
 namespace Pengtao\SdkDataCenter\Component;
 
-use GuzzleHttp\Exception\InvalidArgumentException;
+use Exception;
 
 abstract class AbstractComponent 
 {
@@ -19,7 +19,7 @@ abstract class AbstractComponent
         $this->params = $config['params'];
 
         if (empty($config['secert'])) {
-            throw new \InvalidArgumentException('Not Found Secert Key.');
+            throw new Exception('Not Found Secert Key.');
         }
         $this->secert = $config['secert'];
     }
@@ -45,7 +45,7 @@ abstract class AbstractComponent
     {
         foreach ($field as $k) {
             if (! array_key_exists($k, $this->params)) {
-                throw new InvalidArgumentException("The `{$k}` params is required.");
+                throw new Exception("The `{$k}` params is required.");
             }
         }
     }
@@ -56,7 +56,7 @@ abstract class AbstractComponent
         foreach ($field as $k => $type) {
             $gtype = gettype($this->params[$k]);
             if ($gtype != $type) {
-                throw new InvalidArgumentException("Type Error: `{$k}` need `{$type}`, give `{$gtype}`");
+                throw new Exception("Type Error: `{$k}` need `{$type}`, give `{$gtype}`");
             }
         }
     }
