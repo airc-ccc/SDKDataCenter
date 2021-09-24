@@ -26,3 +26,10 @@ $dataCenter = new DataCenter($config);
 $dataCenter->base->send();
 
 ```
+
+
+
+## Components
+
+- Base
+- Action
