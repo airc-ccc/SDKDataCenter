@@ -41,6 +41,14 @@ class Book extends StatBase
     private $readDate;
 
 
+
+    /**
+     * 渠道
+     */
+    private $app;
+
+
+
     /**
      * 渠道
      */
@@ -63,6 +71,7 @@ class Book extends StatBase
             'CHAPTER_ID'  => $this->chapterId,
             'USER_ID'     => $this->userId,
             'READ_DATE'   => $this->readDate,
+            'APP'         => $this->app,
             'CHANNEL'     => $this->channel,
             'CREATED_AT'  => time()
         ];
@@ -82,6 +91,7 @@ class Book extends StatBase
             'CHAPTER_ID'  => $this->chapterId,
             'USER_ID'     => $this->userId,
             'READ_DATE'   => $this->readDate,
+            'APP'         => $this->app,
             'CHANNEL'     => $this->channel,
             'READ_SECONDS'=> $this->readSeconds,
             'CREATED_AT'  => time()
