@@ -62,6 +62,13 @@ class Book extends StatBase
 
 
     /**
+     * 扩展参数
+     * @var Array
+     */
+    private $optionParams;
+
+
+    /**
      * 设置书籍阅读次数
      */
     public function setReadBookNumber()
@@ -73,6 +80,7 @@ class Book extends StatBase
             'READ_DATE'   => $this->readDate,
             'APP'         => $this->app,
             'CHANNEL'     => $this->channel,
+            'OPTION_PARAMS' => $this->optionParams,
             'CREATED_AT'  => time()
         ];
 
@@ -94,6 +102,7 @@ class Book extends StatBase
             'APP'         => $this->app,
             'CHANNEL'     => $this->channel,
             'READ_SECONDS'=> $this->readSeconds,
+            'OPTION_PARAMS' => $this->optionParams,
             'CREATED_AT'  => time()
         ];
 
